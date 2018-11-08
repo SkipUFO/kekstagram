@@ -18,7 +18,7 @@ var PHOTOS__DESCRIPTION = [
     "Вот это тачка!"
 ]
 
-var pictureTemplate = document.querySelector("#picture-template").content.querySelector(".picture");
+var pictureTemplate = document.querySelector("#picture").content.querySelector(".picture");
 var picture = document.querySelector(".pictures")
 
 
@@ -63,8 +63,8 @@ function clone(array, renderElement, parentElement) {
 function renderPictures(photo) {
     var picturesElement = pictureTemplate.cloneNode(true);
     picturesElement.querySelector("img").src = photo.url;
-    picturesElement.querySelector(".picture-likes").textContent = photo.likes;
-    picturesElement.querySelector(".picture-comments").textContent = photo.comments;
+    picturesElement.querySelector(".picture__likes").textContent = photo.likes;
+    picturesElement.querySelector(".picture__comments").textContent = photo.comments.length;
     return picturesElement;
 };
 
