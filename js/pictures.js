@@ -90,9 +90,9 @@ function renderBigPicture(photo) {
     bigPicture.querySelector(".social__footer").classList.add("hidden");
     var socialComments = bigPicture.querySelector(".social__comments");
     var socialComment = socialComments.querySelector(".social__comment");
-    var comments = photo.comment;
-    renderComments(comments, socialComment);
-    clone(comments, renderComments, socialComments);
+    var comments = photo.comments;
+    var _renderComments = renderComments(comments, socialComment);
+    clone(comments, _renderComments, socialComments);
 };
 
 var uploadFile = document.querySelector("#upload-file");
